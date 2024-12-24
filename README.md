@@ -16,3 +16,4 @@ embedding space. The architecture of the image encoder can take the form of a CN
 CLIP first converts tokens(words) into lower cased byte pair encoding representation. To facilitate mini-batch processing each text sequence is encompassed with EOS and SOS tokens capped at fixed length(77). IDs are mapped to 512-D word embedding vectors, which are then passed on to the Transformer. Finally, the features at the [EOS] token position are layer normalized and further processed by a linear projection layer.
 CLIP is trained to align the two embedding spaces learned for images and text. learning objective is formulated as a contrastive loss
 CLIP is pre-trained to predict whether an image matches a textual description, it naturally fits zero-shot recognition. This is achieved by comparing image features with the classification weights synthesized by the text encoder, which takes as input textual descriptions specifying classes of interest
+
